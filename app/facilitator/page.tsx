@@ -389,3 +389,8 @@ export default function FacilitatorPage() {
     </div>
   );
 }
+// In the PIN gate in facilitator/page.tsx, add a role toggle:
+const [role, setRole] = useState<'FACILITATOR'|'DOCTOR'>('FACILITATOR');
+
+// Then in the main panel, conditionally hide room config and walk-in for DOCTOR role:
+// Only show "Mark Done" and the room assignment for their room
